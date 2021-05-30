@@ -1,0 +1,103 @@
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+
+.gallery {
+    padding: 60px 0 90px;
+    max-width: 1000px;
+    margin: 0 auto;
+    &__buttons {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__btn {
+        margin: 0 13px;
+        background-color: transparent;
+        border: 1px solid #454647;
+        border-radius: 20px;
+        padding: 6px 16px;
+        color: #8f8d8d;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+    .mixitup-control-active {
+        background-color: #ffef35;
+        border: 1px solid #ffef35;
+        color: #363838;
+    }
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 30px 35px;
+    }
+    &__item:first-of-type {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+    &__item img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    &.gallery-page {
+        .gallery__item:nth-child(8) {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+    }
+    &__heart-count {
+        display: flex;
+        align-items: center;
+    }
+    &__count {
+        margin-left: 10px;
+        font-size: 20px;
+    }
+    &__heart {
+        width: 25px;
+        margin: 20px 0px;
+        cursor: pointer;
+    }
+    &__comment {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    &__comment-area {
+        resize: none;
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        outline: none;
+        height: 10vh;
+    }
+    &__comment-btn {
+        display: block;
+        background-color:#454647;
+        font-size: 14px;
+        padding: 15px 25px;
+        margin-top: 15px;
+        color: white;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        outline: none;
+    }
+    &__image {
+        height: 60vh;;
+    }
+    &__commentAdd {
+        margin-bottom: 35px;
+        width: 100%;
+    }
+    &__commentAdd p {
+        padding: 10px 10px;
+        border-bottom: 1px solid rgb(212, 210, 210);
+        margin-bottom: 10px;
+    }
+}
